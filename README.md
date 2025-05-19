@@ -27,4 +27,4 @@ Scrape. Analyze. Optimize. Let AI decode Instagram profiles for you.
 
 Please react to my article and share it to help me win the hackaton. Thank you so much :)
 
-- https://dev.to/razielrodrigues/instaanalyzer-an-ai-instagram-analyst-powered-by-php-neuron-ai-and-bright-data-462k
+- https://dev.to/razielrodrigues/instaanalyzer-an-ai-instagram-analyst-powered-by-php-neuron-ai-and-bright-data-1041
