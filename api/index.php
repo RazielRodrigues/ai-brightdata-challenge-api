@@ -27,7 +27,7 @@ if (!is_string($profile)) {
     echo json_encode(['data' => $error]);
     exit;
 }
-$profile = 'raziel.rodrigues';
+
 $message = 'analyze the profile: https://www.instagram.com/' . $profile;
 try {
     $response = InstagramAnalyzer::make()->structured(new UserMessage($message));

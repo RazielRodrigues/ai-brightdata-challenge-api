@@ -19,6 +19,10 @@ Scrape. Analyze. Optimize. Let AI decode Instagram profiles for you.
 
 <img src="image.png">
 
+# System Design
+
+<img src="system.png">
+
 # Full Article
 
 Please react to my article and share it to help me win the hackaton. Thank you so much :)
