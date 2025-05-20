@@ -3,11 +3,6 @@
 Scrape. Analyze. Optimize. Let AI decode Instagram profiles for you.
 
 # Getting started
-
-- Troubleshooting with the NeuronAI
-    - vendor\inspector-apm\neuron-ai\src\MCP\McpConnector.php
-    - go to this file in line 64 and add: $input['description'] ?? '',
-    - because it is a bug that the team of the framework is still fixing
 - Configure the .env file
     - create your bright data free acount and get your api key: https://brightdata.com
     - create your mistral free acount and get your api key: https://mistral.ai
