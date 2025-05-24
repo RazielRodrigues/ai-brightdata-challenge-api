@@ -1,4 +1,4 @@
-# AI BRIGHT DATA CHALLENGE API EXAMPLES
+# AI BRIGHT DATA CHALLENGE API
 
 > Scrape. Analyze. Optimize. Let AI decode Instagram profiles for you powered by Bright Data
 
