@@ -26,7 +26,7 @@
 
 <img src="api/system.png">
 
-# MCP SERVER API
+# NODE JS MCP SERVER
 
 <img src="mcp/example.png">
 
