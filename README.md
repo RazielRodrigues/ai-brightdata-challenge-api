@@ -1,22 +1,30 @@
-# AI BRIGHT DATA CHALLENGE
+# AI BRIGHT DATA CHALLENGE API EXAMPLES
 
-Scrape. Analyze. Optimize. Let AI decode Instagram profiles for you.
+> Scrape. Analyze. Optimize. Let AI decode Instagram profiles for you powered by Bright Data
 
 # Getting started
-- Configure the .env file
+- Configure the .envs file
     - create your bright data free acount and get your api key: https://brightdata.com
     - create your mistral free acount and get your api key: https://mistral.ai
-- Start the PHP server with inside the api dir with: php -S 127.0.0.1:8000 .\index.php
-- Make the request: curl.exe -X POST "http://127.0.0.1:8000/" -H "Content-Type: application/x-www-form-urlencoded" -d "profile=instagram.username"
-- Get the infomation of the profile
+    - create your smithery free acount and get your api key: https://smithery.ai
+- PHP API:
+    - run composer install inside api folder
+    - Start the PHP server inside the src dir with: php -S 127.0.0.1:8000 .\index.php
+    - Make the request: curl.exe -X POST "http://127.0.0.1:8000/" -H "Content-Type: application/x-www-form-urlencoded" -d "profile=instagram.username"
+    - Get the infomation of the profile destiled by the LLM
+- MCP SERVER:
+    - run npm install inside mcp folder
+    - Start the Node JS server inside the mcp dir with: npm run start
+    - Make the request: curl.exe -X POST "http://localhost:8000/" -H "Content-Type: application/x-www-form-urlencoded" -d "profile=instagram.username"
+    - Get the infomation of the profile directly from the MCP tool of Bright Data
 
-# Example Response
+# Example Response (PHP API)
 
-<img src="image.png">
+<img src="api/example.png">
 
-# System Design
+# Example Response (MCP SERVER API)
 
-<img src="system.png">
+<img src="mcp/example.png">
 
 # Full Article
 
