@@ -15,7 +15,7 @@
 - MCP SERVER:
     - run npm install inside mcp folder
     - Start the Node JS server inside the mcp dir with: npm run start
-    - Make the request: curl.exe -X POST "http://localhost:8000/" -H "Content-Type: application/x-www-form-urlencoded" -d "profile=instagram.username"
+    - Make the request: curl.exe --location --request GET 'http://localhost:3000?profile=raziel.rodrigues&tool=web_data_instagram_profiles'
     - Get the infomation of the profile directly from the MCP tool of Bright Data
 
 # PHP API
