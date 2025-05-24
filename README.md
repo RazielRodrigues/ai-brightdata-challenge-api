@@ -6,7 +6,7 @@
 - Configure the .envs file
     - create your bright data free acount and get your api key: https://brightdata.com
     - create your mistral free acount and get your api key: https://mistral.ai
-    - create your smithery free acount and get your api key: https://smithery.ai
+    - create your smithery free acount and get your profile: https://smithery.ai
 - PHP API:
     - run composer install inside api folder
     - Start the PHP server inside the src dir with: php -S 127.0.0.1:8000 .\index.php
