@@ -443,16 +443,16 @@
         },
         {
             "name": "inspector-apm/inspector-php",
-            "version": "3.12.0",
+            "version": "3.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inspector-apm/inspector-php.git",
-                "reference": "a9a00d78b1bba249ad02a15f3d25fc85b4157830"
+                "reference": "3b363bca7a9c3a876324f4ca0e5fd6762b60b622"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inspector-apm/inspector-php/zipball/a9a00d78b1bba249ad02a15f3d25fc85b4157830",
-                "reference": "a9a00d78b1bba249ad02a15f3d25fc85b4157830",
+                "url": "https://api.github.com/repos/inspector-apm/inspector-php/zipball/3b363bca7a9c3a876324f4ca0e5fd6762b60b622",
+                "reference": "3b363bca7a9c3a876324f4ca0e5fd6762b60b622",
                 "shasum": ""
             },
             "require": {
@@ -486,44 +486,53 @@
             ],
             "support": {
                 "issues": "https://github.com/inspector-apm/inspector-php/issues",
-                "source": "https://github.com/inspector-apm/inspector-php/tree/3.12.0"
+                "source": "https://github.com/inspector-apm/inspector-php/tree/3.12.1"
             },
-            "time": "2025-03-07T10:14:49+00:00"
+            "time": "2025-05-06T16:25:30+00:00"
         },
         {
             "name": "inspector-apm/neuron-ai",
-            "version": "1.9.35",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inspector-apm/neuron-ai.git",
-                "reference": "610488a3a200d4da53f64774d9e1f5d293079b3a"
+                "reference": "b42d70d0701bd5ed3cc1ffaa9c627b04ac0f560e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inspector-apm/neuron-ai/zipball/610488a3a200d4da53f64774d9e1f5d293079b3a",
-                "reference": "610488a3a200d4da53f64774d9e1f5d293079b3a",
+                "url": "https://api.github.com/repos/inspector-apm/neuron-ai/zipball/b42d70d0701bd5ed3cc1ffaa9c627b04ac0f560e",
+                "reference": "b42d70d0701bd5ed3cc1ffaa9c627b04ac0f560e",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.0",
                 "php": "^8.1",
-                "phpdocumentor/reflection-docblock": "^5.6",
+                "phpdocumentor/reflection-docblock": "^5.3 || ^5.6",
                 "psr/http-message": "^1.0|^2.0",
                 "psr/log": "^1.0|^2.0|^3.0",
-                "symfony/property-access": "^6.4 || ^7.0",
-                "symfony/property-info": "^6.4 || ^7.0",
-                "symfony/serializer": "^6.4 || ^7.0",
-                "symfony/validator": "^6.4 || ^7.0"
+                "symfony/property-access": "^5.4 || ^6.4 || ^7.0",
+                "symfony/property-info": "^5.4 || ^6.4 || ^7.0",
+                "symfony/serializer": "^5.4 || ^6.4 || ^7.0",
+                "symfony/validator": "^5.4 || ^6.4 || ^7.0"
             },
             "require-dev": {
+                "doctrine/orm": "^2.20",
                 "elasticsearch/elasticsearch": "^8.0",
-                "inspector-apm/inspector-php": "^3.9",
+                "ext-pdo": "*",
+                "friendsofphp/php-cs-fixer": "^3.75",
+                "inspector-apm/inspector-php": "dev-master",
+                "peckphp/peck": "^0.1.3",
                 "php-http/curl-client": "^2.3",
+                "phpstan/phpstan": "^2.1",
                 "phpunit/phpunit": "^9.0",
+                "rector/rector": "^2.0",
+                "symfony/cache": "^5.4 || ^6.4 || ^7.0",
                 "symfony/process": "^5.0|^6.0|^7.0",
+                "tomasvotruba/type-coverage": "^2.0",
                 "typesense/typesense-php": "^5.0"
             },
             "suggest": {
+                "doctrine/orm": "^2.20",
                 "elasticsearch/elasticsearch": "^7.0|^8.0",
                 "inspector-apm/inspector-php": "^3.9",
                 "php-http/curl-client": "^2.3",
@@ -549,9 +558,9 @@
             "description": "PHP AI Framework with built-in observability.",
             "support": {
                 "issues": "https://github.com/inspector-apm/neuron-ai/issues",
-                "source": "https://github.com/inspector-apm/neuron-ai/tree/1.9.35"
+                "source": "https://github.com/inspector-apm/neuron-ai/tree/1.10.1"
             },
-            "time": "2025-05-16T12:59:31+00:00"
+            "time": "2025-05-23T11:42:35+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
