@@ -22,9 +22,17 @@
 
 <img src="api/example.png">
 
+# System Design (PHP API)
+
+<img src="api/system.png">
+
 # Example Response (MCP SERVER API)
 
 <img src="mcp/example.png">
+
+# System Design (MCP SERVER API)
+
+<img src="mcp/system.png">
 
 # Full Article
 
