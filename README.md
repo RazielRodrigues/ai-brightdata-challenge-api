@@ -18,19 +18,19 @@
     - Make the request: curl.exe -X POST "http://localhost:8000/" -H "Content-Type: application/x-www-form-urlencoded" -d "profile=instagram.username"
     - Get the infomation of the profile directly from the MCP tool of Bright Data
 
-# Example Response (PHP API)
+# PHP API
 
 <img src="api/example.png">
 
-# System Design (PHP API)
+---
 
 <img src="api/system.png">
 
-# Example Response (MCP SERVER API)
+# MCP SERVER API
 
 <img src="mcp/example.png">
 
-# System Design (MCP SERVER API)
+---
 
 <img src="mcp/system.png">
 
