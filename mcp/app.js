@@ -5,11 +5,6 @@ import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 const app = express();
 const PORT = process.env.PORT;
 
-// MCP Config
-const profileId = process.env.SMITHERY_PROFILE;
-const apiKey = process.env.BRIGHT_API_TOKEN;
-const serverName = "@luminati-io/brightdata-mcp";
-
 function formatComments(data) {
     if (!data.length) {
         return null;
@@ -35,6 +30,11 @@ app.use(express.json());
 // Rota para pegar dados do Instagram
 app.get('/', async (req, res) => {
     try {
+
+        // MCP Config
+        const profileId = process.env.SMITHERY_PROFILE;
+        const apiKey = process.env.BRIGHT_API_TOKEN;
+        const serverName = "@luminati-io/brightdata-mcp";
 
         const transport = new StreamableHTTPClientTransport(
             `https://server.smithery.ai/${serverName}/mcp?profile=${profileId}&api_key=${apiKey}`
@@ -107,8 +107,6 @@ app.post('/posts-analyze', async (req, res) => {
                 "alt_text": data.alt_text,
                 "comments": formatComments(data.latest_comments),
             }
-
-            console.log(formatedData)
 
             result.push(formatedData)
         }
