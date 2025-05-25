@@ -8,23 +8,23 @@
     - create your mistral free acount and get your api key: https://mistral.ai
     - create your smithery free acount and get your profile: https://smithery.ai
 - PHP API:
-    - run composer install inside api folder
+    - run composer install inside app/api folder
     - Start the PHP server inside the src dir with: php -S 127.0.0.1:8000 .\index.php
     - Make the request: curl.exe -X POST "http://127.0.0.1:8000/" -H "Content-Type: application/x-www-form-urlencoded" -d "profile=instagram.username"
     - Get the infomation of the profile destiled by the LLM
 - MCP SERVER:
     - run npm install inside mcp folder
-    - Start the Node JS server inside the mcp dir with: npm run start
+    - Start the Node JS server inside the mcp/api dir with: npm run start
     - Make the request: curl.exe --location --request GET 'http://localhost:3000?profile=raziel.rodrigues&tool=web_data_instagram_profiles'
     - Get the infomation of the profile directly from the MCP tool of Bright Data
 
 # PHP API
 
-<img src="api/example.png">
+<img src="app/example.png">
 
 ---
 
-<img src="api/system.png">
+<img src="app/system.png">
 
 # NODE JS MCP SERVER
 
