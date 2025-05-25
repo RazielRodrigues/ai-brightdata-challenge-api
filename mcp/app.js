@@ -7,25 +7,26 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 
-// MCP Config
-const profileId = process.env.SMITHERY_PROFILE;
-const apiKey = process.env.BRIGHT_API_TOKEN;
-const serverName = "@luminati-io/brightdata-mcp";
-
-const transport = new StreamableHTTPClientTransport(
-    `https://server.smithery.ai/${serverName}/mcp?profile=${profileId}&api_key=${apiKey}`
-);
-
-const client = new Client({
-    name: "Client",
-    version: "1.0.0"
-});
-
-await client.connect(transport);
-
 // Rota simples para pegar dados do Instagram
 app.get('/', async (req, res) => {
     try {
+
+        // MCP Config
+        const profileId = process.env.SMITHERY_PROFILE;
+        const apiKey = process.env.BRIGHT_API_TOKEN;
+        const serverName = "@luminati-io/brightdata-mcp";
+
+        const transport = new StreamableHTTPClientTransport(
+            `https://server.smithery.ai/${serverName}/mcp?profile=${profileId}&api_key=${apiKey}`
+        );
+
+        const client = new Client({
+            name: "Client",
+            version: "1.0.0"
+        });
+
+        await client.connect(transport);
+
         const { profile, tool } = req.query;
 
         const result = await client.callTool({
@@ -42,5 +43,5 @@ app.get('/', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
+    console.log(`Servidor rodando na porta http://localhost:${PORT}`);
 });
