@@ -32,7 +32,7 @@ app.get('/', async (req, res) => {
         const result = await client.callTool({
             name: tool,
             arguments: {
-                url: 'https://www.instagram.com/' + profile
+                url: profile
             }
         });
 
