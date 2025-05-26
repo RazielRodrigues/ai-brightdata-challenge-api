@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 function formatComments(data) {
-    if (!data.length) {
+    if (!data?.length) {
         return null;
     }
 
@@ -105,7 +105,7 @@ app.post('/posts-analyze', async (req, res) => {
                 "location": data.location,
                 "likes": data.likes,
                 "alt_text": data.alt_text,
-                "comments": formatComments(data.latest_comments),
+                "comments": formatComments(data?.latest_comments),
             }
 
             result.push(formatedData)
