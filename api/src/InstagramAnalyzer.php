@@ -25,10 +25,10 @@ class InstagramAnalyzer extends Agent
     {
         return new SystemPrompt(
             background: [
-                'Analyse instagram'
+                'Analyse instagram profile'
             ],
             steps: [
-                'use: `web_data_instagram_profiles`, `web_data_instagram_reels`, `web_data_instagram_posts`, `web_data_instagram_comments`',
+                'You do the analyse of profile giving insights to the puser about it',
             ],
             output: [
                 'Return your output as a populated instance of the provided PHP class.',
