@@ -1,6 +1,15 @@
 import express from 'express';
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
+//import { createSmitheryUrl } from "@smithery/sdk"
+
+// const config = {
+//     "apiToken": "string",
+//     "browserAuth": "string",
+//     "webUnlockerZone": "string"
+// }
+// const serverUrl = createSmitheryUrl("https://server.smithery.ai/@luminati-io/brightdata-mcp", { config, apiKey: "your-smithery-api-key" })
+// const transport = new StreamableHTTPClientTransport(serverUrl)
 
 const app = express();
 const PORT = process.env.PORT;
@@ -112,6 +121,43 @@ app.post('/posts-analyze', async (req, res) => {
         }
 
         res.json(result);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// Rota para pegar dados da web
+app.get('/web-analyze', async (req, res) => {
+    try {
+
+        // MCP Config
+        const profileId = process.env.SMITHERY_PROFILE;
+        const apiKey = process.env.BRIGHT_API_TOKEN;
+        const serverName = "@luminati-io/brightdata-mcp";
+
+        const transport = new StreamableHTTPClientTransport(
+            `https://server.smithery.ai/${serverName}/mcp?profile=${profileId}&api_key=${apiKey}`
+        );
+
+        const client = new Client({
+            name: "Client",
+            version: "1.0.0"
+        });
+
+        await client.connect(transport);
+
+        const { profile } = req.query;
+
+        const result = await client.callTool({
+            name: 'search_engine',
+            arguments: {
+                query: profile,
+                engine: 'google',
+                format: 'json'
+            }
+        });
+
+        res.json(result.content[0].text);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
